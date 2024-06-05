@@ -1,0 +1,26 @@
+<div class="container">
+    <app-compoent-heading [title]="'Ask to BOT (Personalised)'"
+        [description]='""'></app-compoent-heading>
+
+
+    <div class="container mb-5">
+        <form data-aos="zoom-in" data-aos-duration="1000" (ngSubmit)="onSubmit()">
+            <textarea class="form-control" type="text" placeholder="Enter the Data" name="urlInput"
+                [(ngModel)]="desriction"></textarea><br>
+            <input class="form-control" type="text" placeholder="Ask To BOT" name="urlInput"
+                [(ngModel)]="question"><br>
+            <div class="container d-grid gap-2 col-4 mx-auto">
+                <button class="btn btn-primary mb-3 text-center" type="submit">Get Answer</button>
+            </div>
+        </form>
+       
+    </div>
+    <div class="container mb-5" *ngIf="answered">
+
+        <div class="answer-container conatiner p-3 shadow-lg" *ngIf="answer">
+            <app-compoent-heading [title]="'ChatBot Answer'"
+        [description]='""'></app-compoent-heading>
+            <p>{{ answer }}</p>
+        </div>
+    </div>
+</div>

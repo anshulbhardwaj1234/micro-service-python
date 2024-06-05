@@ -1,0 +1,53 @@
+<div class="container">
+    <app-compoent-heading [title]="'IPC Section Detection'"
+        [description]='"Explore the AI power to tell about the IPC section based on your Provided Description of crime"'></app-compoent-heading>
+
+
+    <div class="container mb-5">
+        <form data-aos="zoom-in" data-aos-duration="1000" (ngSubmit)="onSubmit()">
+            <h1 class="text-center my-4 fs-2">Enter the Description or IPC Section</h1>
+            <input class="form-control" type="text" placeholder="a description of crime" name="urlInput"
+                [(ngModel)]="desriction"><br>
+            <div class="container d-grid gap-2 col-4 mx-auto">
+                <button class="btn btn-primary mb-3 text-center" type="submit">Get Details</button>
+            </div>
+        </form>
+        <div data-aos="flip-up" class="container text-startresultDiv p-3 mb-2 bg-info-subtle text-emphasis-info"
+            *ngIf="resultDIV">
+            <p class="fs-5 note bg-primary-subtle fw-semibold"><span class="fs-4 fw-bolder ">Note : </span>The Analysis is based on the IPCsection details provided by the NCRB(Nation crime Record beauro)</p>
+        </div>
+    </div>
+
+    <div data-aos="flip-up" data-aos-duration="1500" class="container p-3 text-start resultDiv" *ngIf="resultDIV">
+        <p  class="fs-4 p-2 AnalysisResultPositive fw-semibold"><span class="fs-5 fw-semibold">Punishment is:
+            </span>{{Report.punish}}</p>
+        <p class="fs-4 p-2 AnalysisResultNegetive fw-semibold"><span class="fs-5 fw-semibold">IPC Section is:
+            </span>{{Report.ipc}}</p>
+        <p  class="fs-4 p-2 AnalysisResultModerate fw-semibold"><span class="fs-5 fw-semibold">Is punishment bailable or not is:
+            </span>{{Report.bail}}</p>
+        <p class="fs-4 p-2 AnalysisResultModerate fw-semibold"><span class="fs-5 fw-semibold">Court Required is:
+            </span>{{Report.court}}</p>
+        
+    </div>
+
+
+    <div data-aos="flip-up" data-aos-duration="1500" class="error" *ngIf="ErrorDIV">
+        <div class="row">
+            <div class="col-sm-11 container">
+                <div class="col-sm-12   text-center" data-aos="flip-down" data-aos-delay="500">
+                    <div class="four_zero_four_bg">
+                        <h1 class="text-center ">{{ErrCode}}</h1>
+                    </div>
+                    <div class="contant_box_404">
+                        <h3 class="h2 fs-4 fw-bolder">
+                            {{ErrString}}
+                        </h3>
+                        <button class="fs-4 btn btn-primary mb-3 text-center fw-semibold" (click)="Retry()">Try
+                            Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

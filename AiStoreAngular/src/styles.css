@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+  body {
+    height: 100%;
+    background-color: var(--body-bg-color);
+    text-align: justify;
+    scroll-behavior: smooth;
+  }
+
+body p{
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--body-bg-color);
+    border-radius: 9px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 9px;
+    -webkit-box-shadow: inset 0 0 6px var(--primary-header_footer-color);
+  }
+
+  .theme-black-white {
+    --header1-color: #f5f5f5; 
+    --header-main-color: #333333; 
+    --header1-font-color: #333333; 
+    --header-main-font-color: #f5f5f5; 
+    --heading1-bg-color: #4a4a4a; 
+    --heading1-color: #f5f5f5; 
+    --heading2-bg-color: #4a4a4a; 
+    --heading2-color: #f5f5f5; 
+    --body-bg-color: #ffffff; 
+    --text-color: #333333; 
+    --element-bg-color: #dadada; 
+    --img-greyScale: grayscale(1);
+    /* Other variables */
+    --base-font-size: 1.2rem;
+    --heading1-font-size: 1.5rem;
+    --heading2-font-size: 1.4rem;
+    --small-font-size: 1rem;
+  }
+  
+
+
+  .theme-dark {
+    --header1-color: #c6a300;
+    --header-main-color: #2f4f4f;
+    --header1-font-color: #2f4f4f; 
+    --header-main-font-color: #c6a300; 
+    --heading1-bg-color: #000000; 
+    --heading1-color: #c6a300; 
+    --heading2-bg-color: #000000;
+    --heading2-color: #c6a300;
+    --body-bg-color: #2f4f4f; 
+    --text-color: #ffffff; 
+    --element-bg-color: #4d4d4d; 
+    --img-greyScale: grayscale(1);
+    /* Other variables */
+    --base-font-size: 1.2rem;
+    --heading1-font-size: 1.5rem;
+    --heading2-font-size: 1.4rem;
+    --small-font-size: 1rem;
+  }
+  
+
+
+  .theme-default {
+    --header1-color: #5C6B76;
+    --header-main-color: #3B3B58; 
+    --header1-font-color: #ffffff; 
+    --header-main-font-color: #ffffff;
+    --heading1-bg-color: #b2511d;
+    --heading1-color: #fafafb; 
+    --heading2-bg-color: rgb(255, 255, 255); 
+    --heading2-color: #4b5478; 
+    --body-bg-color: rgb(255, 255, 255); 
+    --text-color: #050404; 
+    --element-bg-color: #add8e6; 
+    --icon-color:#ff5900; 
+    --img-greyScale: grayscale(1);
+    /* Other variables */
+    --base-font-size: 1.1rem;
+    --heading1-font-size: 1.5rem;
+    --heading2-font-size: 1.4rem;
+    --small-font-size: 1rem;
+  }
+  
+
+
+  .small-font,span{
+    font-size: var(--small-font-size)!important;
+  }
+
+  .base-font{
+    font-size: var(--base-font-size)!important;
+    color:var(--text-color)
+  }
+
+  .heading2-font{
+    font-size: var(--heading2-font-size)!important;
+    background-color: var(--heading2-bg-color);
+    color: var(--heading2-color);
+  }
+
+  .heading1-font{
+    font-size: var(--heading1-font-size)!important;
+    background-color: var(--heading1-bg-color);
+    color: var(--heading1-color);
+  }
+
+
+  .menu-btn,.menu-btn mat-icon, .menu-btn span{
+    background-color: var(--header1-color)!important;
+    color: var(--header1-font-color)!important;
+}
+.menu-btn:hover,.menu-btn:hover mat-icon, .menu-btn:hover span{ 
+    background-color: var(--header1-color)!important;
+    color: var(--icon-color)!important;
+}
+.mat-mdc-menu-content {
+  padding: 0!important;
+}

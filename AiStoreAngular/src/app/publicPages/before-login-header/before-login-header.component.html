@@ -1,0 +1,52 @@
+<nav class="navbar header-main shadow-lg navbar-expand-lg">
+	<div class="container-fluid">
+		<img src="../../../assets/Ginie.png" alt="" srcset="" style="height: 2.1rem;width: 2.1rem;">
+		<a class="navbar-brand" [routerLink]="'.'">Ginie Store</a>
+
+		<!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+		<!-- Step 2: Add the ngbCollapse directive to the element below. -->
+		<div [ngbCollapse]="isMenuCollapsed" class="collapse justify-content-end navbar-collapse">
+			<ul class="navbar-nav" style="flex-direction: row; gap: 1rem;flex-wrap: wrap;">
+				<!-- <li class="nav-item active">
+					<a class="nav-link routes d-flex justify-content-center align-items-center " [routerLink]="'.'" (click)="isMenuCollapsed = true">
+						<p class="mb-0 mr-2 ">
+							Home
+						</p>
+					</a>
+				</li> -->
+				<li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'.'" (click)="isMenuCollapsed = true">
+                        Home
+                    </a>
+                </li>
+				<li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'/About'" (click)="isMenuCollapsed = true">About</a>
+				</li>
+				<!-- <li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'/Blog'" (click)="isMenuCollapsed = true">Blog</a>
+				</li>
+				<li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'/marketMood'" (click)="isMenuCollapsed = true">Market Mood</a>
+				</li> -->
+				
+				<li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'/contactUs'" (click)="isMenuCollapsed = true">Contact Us</a>
+				</li>
+				<li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'/GenieBot'" (click)="isMenuCollapsed = true"><mat-icon class="nav-link routes">chat</mat-icon> FAQ</a>
+				</li>
+				<li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'/signin'" (click)="isMenuCollapsed = true"><mat-icon>person</mat-icon></a>
+				</li>
+				<!-- <li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'.'" (click)="isMenuCollapsed = true"><mat-icon>search</mat-icon></a>
+				</li> -->
+				<!-- <li class="nav-item  d-flex justify-content-center align-items-center">
+                    <a class="nav-link routes" [routerLink]="'.'" (click)="isMenuCollapsed = true"><mat-icon>shopping_cart</mat-icon></a>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,35 @@
+<div class="container">
+    <app-compoent-heading [title]="'Ask to PDF'"
+        [description]="'Upload a PDF or ask a question'"></app-compoent-heading>
+
+    <div class="container mb-5" *ngIf="!uploaded">
+        <form data-aos="zoom-in" data-aos-duration="1000" (ngSubmit)="onUpload()">
+            <h1 class="text-center my-4 fs-2">Upload PDF</h1>
+            <input class="form-control" type="file" placeholder="Upload PDF" name="urlInput"
+                (change)="onFileSelected($event)">
+            <br>
+            <div class="container d-grid gap-2 col-4 mx-auto">
+                <button class="btn btn-primary mb-3 text-center" type="submit">Upload</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mb-5" *ngIf="uploaded">
+        <form data-aos="zoom-in" data-aos-duration="1000" (ngSubmit)="AskPDF()">
+            <h1 class="text-center my-4 fs-2">Ask a Question</h1>
+            <input class="form-control" type="text" placeholder="Ask To PDF" name="question" [(ngModel)]="question">
+            <br>
+            <div class="container d-grid gap-2 col-4 mx-auto">
+                <button class="btn btn-primary mb-3 text-center" type="submit">Ask it</button>
+            </div>
+        </form>
+    </div>
+    <div class="container mb-5" *ngIf="answered">
+
+        <div class="answer-container conatiner p-3 shadow-lg" *ngIf="answer">
+            <app-compoent-heading [title]="'ChatBot Answer'"
+        [description]='""'></app-compoent-heading>
+            <p>{{ answer }}</p>
+        </div>
+    </div>
+</div>

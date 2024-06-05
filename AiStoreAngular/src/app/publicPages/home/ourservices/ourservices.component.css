@@ -1,0 +1,95 @@
+
+.OurService .title h1{
+    color: var(--heading1-color);
+    background-color:var(--heading2-bg-color);
+    font-size: var(--heading1-font-size);
+    font-weight: bolder;
+  }
+  .OurService .define p{
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+  }
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px);
+    background: transparent;
+    border: 0;
+  }
+  
+  .logo {
+    display: flex; /* Add this */
+    align-items: center; /* Add this to vertically center the content */
+    width: 100%; /* Adjust the width as needed */
+    text-align: center;
+    color: var(--icon-color);
+    padding: 0.3rem;
+  }
+  
+  .logo mat-icon {
+    margin-right: 10px; /* Add some spacing between icon and text */
+    color: var(--icon-color);
+  }
+  .logo p{
+    margin-right: 10px; /* Add some spacing between icon and text */
+    color: var(--icon-color);
+  }
+  
+  .logo p {
+    margin: 0; /* Remove default margin for the paragraph */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .content h2 {
+    margin-top: 0;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .logo {
+      order: -1; /* Logo section first */
+    }
+  
+    .content {
+      order: 1; /* Content section second */
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    .card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  
+  /* Media query for extra small screens (e.g., mobile devices) */
+  @media (max-width: 479px) {
+    .card {
+      width: 100%;
+    }
+    
+    .logo {
+      order: 1; /* Logo section first */
+    }
+    
+    .content {
+      order: 2; /* Content section second */
+    }
+  }
+  

@@ -1,0 +1,32 @@
+sign-in.component.css
+
+.container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 350px;
+  }
+  .signin-container {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .signin-container img {
+    width: 150px;
+  }
+  
+  .forgot-password-link {
+    color: #007bff; 
+  }
+  
+  .register-link {
+    color: #28a745; 
+  }
+
+  .btn{
+    width: 80%;
+    background: var(--header-main-color);
+    color: var(--header-main-font-color);
+  }
+  

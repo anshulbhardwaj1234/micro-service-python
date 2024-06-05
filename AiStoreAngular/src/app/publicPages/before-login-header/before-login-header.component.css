@@ -1,0 +1,13 @@
+.header-main{
+padding: 0.3rem;
+margin: 0;
+background-color: var(--header-main-color);
+color: var(--header-main-font-color);
+}
+
+.routes,.navbar-brand{
+    color: var(--header-main-font-color);
+}
+.navbar-toggler, mat-icon{
+    color: var(--header-main-font-color);
+}

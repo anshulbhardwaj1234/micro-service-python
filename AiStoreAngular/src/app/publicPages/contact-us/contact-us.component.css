@@ -1,0 +1,83 @@
+.OurService .title h1 {
+    color: var(--heading1-color);
+    background-color: var(--heading2-bg-color);
+    font-size: var(--heading1-font-size);
+    font-weight: bolder;
+}
+
+.OurService .define p {
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px);
+    background: transparent;
+    border: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: var(--icon-color);
+    padding: 0.3rem;
+}
+
+.logo mat-icon {
+    margin-right: 10px;
+    color: var(--icon-color);
+}
+
+.logo p {
+    margin-right: 10px;
+    color: var(--icon-color);
+}
+
+.logo p {
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .logo {
+        order: -1;
+    }
+
+    .content {
+        order: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 479px) {
+    .card {
+        width: 100%;
+    }
+}

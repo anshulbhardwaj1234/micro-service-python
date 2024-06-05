@@ -1,0 +1,28 @@
+<div class="container">
+    <app-compoent-heading [title]="'Ask to BOT'"
+        [description]='""'></app-compoent-heading>
+
+
+    <div class="container mb-5">
+        <form data-aos="zoom-in" data-aos-duration="1000" (ngSubmit)="onSubmit()">
+
+            <input class="form-control" type="text" placeholder="Ask To BOT" name="urlInput"
+                [(ngModel)]="desriction"><br>
+            <div class="container d-grid gap-2 col-4 mx-auto">
+                <button class="btn btn-primary mb-3 text-center" type="submit">Ask</button>
+            </div>
+        </form>
+        <div data-aos="flip-up" class="container text-startresultDiv p-3 mb-2 bg-info-subtle text-emphasis-info"
+            *ngIf="resultDIV">
+            <p class="fs-5 note bg-primary-subtle fw-semibold"><span class="fs-4 fw-bolder ">Note : </span>The Analysis is based on the IPCsection details provided by the NCRB(Nation crime Record beauro)</p>
+        </div>
+    </div>
+    <div class="container mb-5" *ngIf="answered">
+
+        <div class="answer-container conatiner p-3 shadow-lg" *ngIf="answer">
+            <app-compoent-heading [title]="'ChatBot Answer'"
+        [description]='""'></app-compoent-heading>
+            <p>{{ answer }}</p>
+        </div>
+    </div>
+</div>

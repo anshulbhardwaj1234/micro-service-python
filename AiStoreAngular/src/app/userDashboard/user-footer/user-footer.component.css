@@ -1,0 +1,26 @@
+.footer{
+    background-color: var(--header-main-color);
+    width: 100vw;
+    height: auto;
+}
+.footer-info{
+    background-color: var( --header1-color);
+    
+}
+
+.heading-text{
+    color: var(--header-main-font-color);
+}
+.logo .heading-text{
+    font-size: var(--base-font-size);
+}
+
+.copyright .text{
+    color: var(--header1-font-color);
+    font-size: var(--base-font-size);
+}
+
+.socialmedia-icon img{
+    width: 1.2rem;
+    height: 1.2rem;
+}

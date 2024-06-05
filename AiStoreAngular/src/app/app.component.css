@@ -1,0 +1,63 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+  }
+
+  
+.main {
+  display: block;
+  /* overflow-y: hidden; */
+  background-color: var(--body-background-color);
+  .main::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .main::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  .main::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9;
+  padding: .4rem .4rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--header1-color);
+  color: var(--header1-font-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  opacity: 0.8;
+}
+
+.scroll-to-top[hidden] {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

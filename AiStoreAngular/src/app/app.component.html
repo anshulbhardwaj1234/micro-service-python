@@ -1,0 +1,25 @@
+<ngx-ui-loader></ngx-ui-loader>
+@if (!auth.isverfied()) {
+<!-- <app-web-editor-header></app-web-editor-header> -->
+<div class="header">
+  <app-before-login-header />
+</div>
+<div class="main">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+  
+</div>
+}
+@if(auth.isverfied()){
+<div class="main">
+    <app-user-header></app-user-header>
+</div>
+}
+
+<button class="scroll-to-top shadow-lg" (click)="scrollToTop()" [hidden]="isAtTop()">
+  <mat-icon>keyboard_arrow_up</mat-icon>
+</button>
